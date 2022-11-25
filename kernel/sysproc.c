@@ -89,3 +89,14 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+
+sys_pages(void)
+
+{
+
+    printf("[%d] sys_pages(%d)\n", myproc()->pid);
+    return kfreepages();
+
+}
